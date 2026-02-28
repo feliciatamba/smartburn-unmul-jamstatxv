@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 st.set_page_config(layout="wide")
 
-with open("model_rf_kti", "rb") as file:
+with open("model_rf_kti.pkl", "rb") as file:
     model = pickle.load(file)
 
 # =============================
@@ -362,3 +362,4 @@ elif st.session_state.page == "result":
         st.session_state.current_q = 0
         st.session_state.answers = {}
         st.rerun()
+
